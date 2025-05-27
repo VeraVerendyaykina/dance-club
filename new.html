@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dance Club</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div class="header-container">
+            <div class="social-icons">
+                <div class="social-icon"><a href="https://vk.com/club229603116"><img src="images/vk.png" width="40" height="40" alt="VK"></a></div>
+                <div class="social-icon"><a href="https://t.me/spectrumNYiork"><img src="images/telegram.png" width="40" height="40" alt="Telegram"></a></div>
+                <div class="social-icon"><a href="https://wa.me/89061620022"><img src="images/whatsapp.png" width="40" height="40" alt="WhatsApp"></a></div>
+                <div class="social-icon"><img src="images/tiktok.png" width="40" height="40" alt="TikTok"></div>
+            </div>
+            <div class="header-image-container">
+                <img class="header-image" src="images/header.jpg" width="1200" height="400" alt="Dance Club">
+                <button class="button">Send a Form</button>
+            </div>
+        </div>
+
+        <div class="marquee">
+            <p>{{ marqueeText }}</p>
+        </div>
+        
+
+        <div id="dance-app">
+            <h2>Dance Styles</h2>
+            <input v-model="search" type="text" placeholder="Search for a dance..." class="search-input">
+            <ul>
+                <li v-for="dance in filteredDances" :key="dance" 
+                    @click="selectDance(dance)" 
+                    :class="{ active: selectedDance === dance }">
+                    {{ dance }}
+                </li>
+            </ul>
+            <p v-if="selectedDance">{{ danceDescriptions[selectedDance] || 'No description available.' }}</p>
+        </div>
+
+        <div class="button-container">
+            <button class="home-button" @click="goToHome">Вернуться на главную</button>
+        </div>
+    
+        <div class="footer">
+            <p>📍 Dance Club Address: 123 Dance Street, New York, NY</p>
+        </div>
+    </div>
+
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    marqueeText: 'Hurry up and send the form so we can contact you!',
+                    search: '',
+                    selectedDance: null,
+                    dances: [
+                        'Hip-Hop', 'Ballet', 'Salsa', 'Breakdance', 'Tango', 
+                        'Jazz', 'Flamenco', 'Waltz', 'Krump', 'K-Pop Dance'
+                    ],
+                    danceDescriptions: {
+                        'Hip-Hop': 'Energetic urban dance.',
+                        'Ballet': 'Classical dance with graceful moves.',
+                        'Salsa': 'Latin dance with fast steps.',
+                        'Breakdance': 'Acrobatic street dance.',
+                        'Tango': 'Passionate partner dance.',
+                        'Jazz': 'Expressive and dynamic dance style.',
+                        'Flamenco': 'Traditional Spanish dance.',
+                        'Waltz': 'Elegant ballroom dance.',
+                        'Krump': 'High-energy street dance.',
+                        'K-Pop Dance': 'Popular Korean choreography.'
+                    }
+                };
+            },
+            computed: {
+                filteredDances() {
+                    return this.dances.filter(dance =>
+                        dance.toLowerCase().includes(this.search.toLowerCase())
+                    );
+                }
+            },
+            mounted() {
+                this.startMarquee();
+            },
+            methods: {
+                selectDance(dance) {
+                    this.selectedDance = dance;
+                },
+                goToHome() {
+                    window.location.href = 'лаба3.html';
+                },
+                startMarquee() {
+                    const marquee = document.querySelector('.marquee p');
+                    if (marquee) {
+                        marquee.style.animation = 'marquee-scroll 10s linear infinite';
+                    }
+                }
+            }
+        }).mount('#app');
+    </script>
+    
+    
+</body>
+</html>

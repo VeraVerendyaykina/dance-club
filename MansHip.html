@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dance Club</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header-container">
+        <div class="social-icons">
+            <div class="social-icon"><a href="https://vk.com/club229603116"><img src="images/vk.png" width="40" height="40" alt="VK"></a></div>
+            <div class="social-icon"><a href="https://t.me/spectrumNYiork"><img src="images/telegram.png" width="40" height="40" alt="Telegram"></a></div>
+            <div class="social-icon"><a href="https://wa.me/89061620022"><img src="images/whatsapp.png" width="40" height="40" alt="WhatsApp"></a></div>
+            <div class="social-icon"><img src="images/tiktok.png" width="40" height="40" alt="TikTok"></div>
+        </div>
+        <div class="header-image-container">
+            <img class="header-image" src="images/header.jpg" width="1200" height="400" alt="Dance Club">
+            <button class="button">Send a Form</button>
+        </div>
+    </div>
+    <div class="text-marquee">
+        <div class="marquee-span">
+        <p>hurry up and send the form so we can contact you, don't miss the opportunity to join   •    hurry up and send the form so we can contact you, don't miss the opportunity to join    •    hurry up and send the form so we can contact you, don't miss the opportunity to join   •    hurry up and send the form so we can contact you, don't miss the opportunity to join    •    hurry up and send the form so we can contact you, don't miss the opportunity to join    •    hurry up and send the form so we can contact you, don't miss the opportunity to join   •    hurry up and send the form so we can contact you, don't miss the opportunity to join   •    hurry up and send the form so we can contact you, don't miss the opportunity to join   •     </p>
+    </div>
+</div>
+    
+    
+        <!-- Кнопка возврата на главную -->
+<div class="button-container">
+    <button class="home-button" onclick="goToHome()">Вернуться на главную</button>
+</div>
+
+<div class="button-container">
+    <button class="home-button" onclick="goToMoreInfo()" >Узнать больше о танцах</button>
+    </div>
+
+
+    <div class="dance-section">
+        <h2 class="section-title">Man's hip-hop</h2>
+        <div class="content">
+            <div class="section-text">
+                <p class="text-paragraph">Rough male hip-hop is a subgenre characterized by harsh lyrics, aggressive flows, and often dark atmospheres. These tracks focus on street life, struggles, social issues, and personal trials
+                          <p class="text-paragraph">The music may feature heavy beats, low bass, and jarring samples. Artists often use provocative and direct lyrics to convey their emotions and life experiences. </p>     
+                <p class="text-paragraph">Come to gain confidence and express your emotions in dance.</p>              
+              
+            </div>
+            <div class="dance-styles">
+                <div class="dance-row">
+                    <img src="images/mans.jpg" alt="Hip-Hop" width="50%" height="40%">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+       
+    <div class="festivals-section">
+        <h2 class="section-title">Man's hip-hop in our studio</h2>
+        <div class="content">
+            <div class="festivals-carousel">
+                <div class="carousel-images">
+                    <img src="images/man1.png" alt="Festival 1" class="carousel-image">
+                    <img src="images/man2.jpg" alt="Festival 2" class="carousel-image">
+                    <img src="images/man3.jpg" alt="Festival 3" class="carousel-image">
+                </div>
+                
+            </div>
+            <button class="carousel-button left-button" onclick="moveCarousel(-1)">&#10094;</button>
+                <button class="carousel-button right-button" onclick="moveCarousel(1)">&#10095;</button>
+        </div>
+    </div>
+    
+
+
+    <div class="footer">
+        <p>📍 Dance Club Address: 123 Dance Street, New York, NY</p>
+    </div>
+
+
+
+    <!-- Модальное окно -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Submit Your Application</h2>
+        <form class="application-form">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" placeholder="+7 (___) ___-__-__" required>
+            
+            <button type="submit" class="submit-btn">Send</button>
+        </form>
+    </div>
+</div>
+
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
+

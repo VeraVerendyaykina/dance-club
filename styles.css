@@ -1,0 +1,840 @@
+
+.festivals-section {
+    position: relative;
+    margin: 0 5%; /* Делаем отступы адаптивными */
+}
+
+.festivals-carousel {
+    position: relative;
+    width: 90%; /* Делаем ширину адаптивной */
+    max-width: 500px;
+    height: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.carousel-images {
+    display: flex;
+    position: absolute;
+    width: 300%;
+    height: 100%;
+    transition: transform 1s ease-in-out;
+}
+
+.carousel-image {
+    width: 33.33%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.carousel-image:hover {
+    transform: scale(1.05);
+}
+
+/* Кнопки */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    z-index: 2;
+    border-radius: 10%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 24px;
+}
+
+.left-button {
+    left: 20%; /* Адаптивный отступ */
+}
+
+.right-button {
+    right: 20%; /* Адаптивный отступ */
+}
+
+/* Эффект подсветки и увеличения кнопок */
+.carousel-button:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 15px #ff00ff;
+}
+
+@media (max-width: 768px) {
+    .festivals-carousel {
+        height: 300px;
+    }
+    .carousel-button {
+        padding: 10px;
+        font-size: 18px;
+    }
+}
+
+.footer {
+    background: #1a1a2e;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    color: white;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        font-size: 0.9rem;
+        padding: 15px;
+    }
+}
+
+
+body {
+    background: #0a0215;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 10px;
+    gap: 20px;
+    flex-wrap: wrap; /* Разрешаем элементы переходить на новую строку на мобильных устройствах */
+}
+
+.header-image-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.header-image {
+    display: block;
+    width: 1200px;
+    height: 400px;
+}
+
+.button {
+    position: absolute;
+    right: -105px;
+    top: 50%;
+    width: 85px;
+    height: 85px;
+    transform: translateY(-50%);
+    background: linear-gradient(45deg, #00f7ff, #e5fb8a);
+    padding: 10px 20px;
+    color: black;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: box-shadow 0.3s, transform 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+    z-index: 10;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: -105px;
+    position: left;
+    top: 50%;
+   
+    z-index: 15; /* Убедимся, что иконки будут выше изображения */
+}
+
+.social-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(45deg, #ff00ff, #0000ff);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+/* Адаптивность для больше чем средних экранов*/
+@media (max-width: 1500px) {
+    .social-icons {
+        left: -90px; /* Немного уменьшаем отступ, чтобы они не пропадали */
+    }
+    .header-image {
+        width: 100%; /* Изображение адаптивное */
+        height: auto;
+    }
+    .button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 70px; /* Кнопка уменьшается */
+        height: 70px;
+        transform: none; /* Убираем transform */
+        margin: 0;
+    }
+    .social-icons {
+        margin-left: 0;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+        position: static; /* Убираем абсолютное позиционирование */
+        transform: none; /* Убираем трансформацию */
+    }
+    .social-icon {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+
+
+/* Адаптивность для средних экранов*/
+@media (max-width: 1024px) {
+    .social-icons {
+        left: -90px; /* Немного уменьшаем отступ, чтобы они не пропадали */
+    }
+    .header-image {
+        width: 100%; /* Изображение адаптивное */
+        height: auto;
+    }
+    .button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 70px; /* Кнопка уменьшается */
+        height: 70px;
+        transform: none; /* Убираем transform */
+        margin: 0;
+    }
+    .social-icons {
+        margin-left: 0;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+        position: static; /* Убираем абсолютное позиционирование */
+        transform: none; /* Убираем трансформацию */
+    }
+    .social-icon {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column; /* Располагаем элементы по вертикали */
+        gap: 15px;
+        align-items: center; /* Центрируем элементы */
+    }
+
+    .header-image {
+        width: 100%; /* Изображение адаптивное */
+        height: auto;
+    }
+
+    .button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 70px; /* Кнопка уменьшается */
+        height: 70px;
+        transform: none; /* Убираем transform */
+        margin: 0;
+    }
+
+    .social-icons {
+        margin-left: 0;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+        position: static; /* Убираем абсолютное позиционирование */
+        transform: none; /* Убираем трансформацию */
+    }
+    .social-icon {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .button {
+        width: 60px; /* Уменьшаем кнопку */
+        height: 60px;
+    }
+
+    .social-icon {
+        
+        width: 40px; /* Уменьшаем иконки */
+        height: 40px;
+    }
+}
+
+
+
+
+
+.about-us-section, .dance-section,.festivals-section {
+    margin: 40px auto;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+/* Заголовок */
+.section-title {
+    padding-bottom: 10px;
+    border-bottom: 2px solid white;
+    margin-bottom: 60px;
+    text-align: left;
+    font-size: 28px;
+    width: calc(100% + 210px); /* Удлиняем полоску, чтобы она тянулась почти по всей ширине */
+    margin-left: -130px; /* Убираем левый отступ */
+}
+
+/* Контейнер */
+.content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/* Текстовая часть */
+.section-text {
+    width: 35%;
+    font-size: 16px;
+    text-align: left;
+    line-height: 1.8; 
+    margin-left: 160px;
+}
+
+.text-paragraph {
+    margin-bottom: 55px; /* Отступ между абзацами */
+}
+
+/* Танцевальные стили */
+.dance-styles {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+}
+
+/* Ряд танцевальных направлений */
+.dance-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Карточка танцевального стиля */
+.dance-item {
+    width: 200px;
+    height: 150px;
+    background: linear-gradient(45deg, #ff00ff, #0000ff);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.dance-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Галерея фото */
+.photos {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+    width: 60%;
+}
+
+/* Блок "About Us" */
+.about-us-box {
+    width: 35%;
+    min-height: 250px;
+    border: 4px solid transparent;
+    border-radius: 20px;
+    background: transparent;
+    border-image: linear-gradient(45deg, #ff00ff, #0000ff) 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Блок с отзывами */
+.reviews-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%; /* Устанавливаем ширину 100% на маленьких экранах */
+    max-width: 500px; /* Максимальная ширина для нерастяжных экранов */
+    position: relative;
+    margin-left: 0;
+    margin-right: auto;
+    height: 300px; /* Фиксированная высота */
+    overflow: auto; /* Прокрутка, если контента слишком много */
+}
+
+
+
+
+
+
+
+/* Стили для формы отзыва */
+.review-form {
+    width: 100%;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.review-form textarea {
+    width: 90%;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.review-form button {
+    background: #00eaff;
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Блок с отзывами */
+.reviews-list {
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    text-align: left;
+    font-size: 14px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.review-item {
+    width: 90%;
+    padding: 5px;
+    border-bottom: 1px solid white;
+    margin-bottom: 5px;
+}
+
+.review-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-top: 5px;
+}
+
+.review-btn {
+    background: #ff00ff;
+    border: none;
+    padding: 5px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+/* ============ Адаптация для средних экранов (768px - 1024px) ============ */
+@media (max-width: 1024px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .section-text {
+        width: 90%;
+        margin-left: 0; /* Убираем левый отступ */
+    }
+
+    .about-us-box {
+        width: 90%;
+        margin-top: 20px;
+    }
+
+    .dance-styles {
+        width: 90%;
+    }
+
+    .photos {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Центрируем заголовок на экранах менее 1024px */
+    .section-title {
+        text-align: center;
+        width: 100%;
+        margin-left: 0; /* Убираем левый отступ */
+    }
+    .reviews-container {
+        width: 90%; /* Устанавливаем ширину 90% на экранах среднего размера */
+        max-width: 600px; /* Максимальная ширина для экранов среднего размера */
+        margin-left: 0;
+        padding: 10px;
+        height: 250px; /* Фиксированная высота */
+        overflow: auto;
+    }
+}
+
+/* ============ Адаптация для мобильных устройств (<768px) ============ */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 24px;
+        text-align: center;
+        margin-left: 0; /* Убираем левый отступ */
+    }
+
+    .section-text {
+        width: 100%;
+        font-size: 14px;
+        margin-left: 0; /* Убираем левый отступ */
+    }
+
+    .about-us-box {
+        width: 100%;
+        padding: 15px;
+        margin-left: 0;
+    }
+
+    .review-form textarea {
+        height: 40px;
+    }
+
+    .review-form button {
+        padding: 6px 10px;
+    }
+
+    .review-item {
+        font-size: 12px;
+    }
+
+    .dance-row {
+        justify-content: center;
+    }
+
+    .dance-item {
+        width: 160px;
+        height: 120px;
+    }
+
+    .photos {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* Блоки танцев и отзывов уходят под текст */
+    .reviews-container,
+    .dance-styles {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    .reviews-container {
+        width: 100%; /* Устанавливаем ширину 100% на мобильных устройствах */
+        max-width: 100%; /* Убираем максимальную ширину */
+        margin-left: 0;
+        padding: 10px;
+        height: 200px; /* Фиксированная высота */
+        overflow: auto;
+    }
+}
+
+/* ============ Адаптация для очень маленьких экранов (<480px) ============ */
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 22px;
+    }
+
+    .review-form textarea {
+        font-size: 12px;
+    }
+
+    .dance-item {
+        width: 140px;
+        height: 100px;
+    }
+
+    .photos {
+        flex-direction: column;
+        align-items: center;
+    }
+        .reviews-container {
+            width: 300px; /* Фиксированная ширина в пикселях */
+            height: 200px; /* Фиксированная высота */
+            margin: 0 auto; /* Центрируем блок */
+            padding: 10px;
+            overflow: auto; /* Прокрутка при переполнении */
+        }
+}
+
+
+/* Эффект неона при наведении */
+.about-us-box:hover,
+.dance-item:hover,
+.social-icon:hover,
+.button:hover,
+.carousel-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #ff00ff;
+}
+
+.modal {
+    display: none; /* По умолчанию скрыто */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Затемнение фона */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Контент модального окна */
+.modal-content {
+    background: #1a1a2e;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #ff00ff;
+    text-align: center;
+    color: white;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 0.3s;
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Кнопка закрытия */
+.close-button {
+    align-self: flex-end;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Поля формы */
+.application-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.application-form label {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.application-form input {
+    width: 80%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-align: center;
+}
+
+/* Кнопка отправки */
+.submit-btn {
+    background: #00eaff;
+    color: black;
+    padding: 10px;
+    margin-top: 15px;
+    border: none;
+    cursor: pointer;
+    width: 80%;
+    border-radius: 5px;
+    font-weight: bold;
+    transition:  box-shadow 0.3s;
+}
+
+.submit-btn:hover {
+    background: #ff00ff;
+    box-shadow: 0 0 10px #ff00ff;
+}
+.text-marquee {
+            width: 100%;
+            background: #0a0215;
+            color: #00eaff;
+            padding: 2px;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            left: 0;
+            overflow: hidden;
+            position: relative;
+        }
+      
+        .marquee-span {
+            display: flex; /* Располагаем текст в одну строку */
+            animation: marquee 10s linear infinite;
+        }
+
+        .marquee-span p {
+    white-space: pre; /* Показываем пробелы так, как они указаны */
+    padding-right: 50px; /* Расстояние между копиями текста */
+  }
+       
+        
+        @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+        .dance-item img {
+            width: 80px;
+            height: 80px;
+            margin-right: 10px;
+            border-radius: 10px;
+        }
+       
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .home-button {
+            background-color: #345f89;
+            color: white;
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        
+        .home-button:hover {
+            background-color: #f772cf;
+        }
+        
+        
+
+
+
+
+
+
+
+        .search-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        li {
+            padding: 8px;
+            cursor: pointer;
+            
+        }
+        
+        li:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .active {
+            background: #ff00ff;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        .marquee {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+        }
+        
+        .marquee p {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee-scroll 10s linear infinite;
+        }
+        
+        @keyframes marquee-scroll {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+        
+        

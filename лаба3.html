@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dance Club</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header-container">
+        <div class="social-icons">
+            <div class="social-icon"><a href="https://vk.com/club229603116"><img src="images/vk.png" width="40" height="40" alt="VK"></a></div>
+            <div class="social-icon"><a href="https://t.me/spectrumNYiork"><img src="images/telegram.png" width="40" height="40" alt="Telegram"></a></div>
+            <div class="social-icon"><a href="https://wa.me/89061620022"><img src="images/whatsapp.png" width="40" height="40" alt="WhatsApp"></a></div>
+            <div class="social-icon"><img src="images/tiktok.png" width="40" height="40" alt="TikTok"></div>
+        </div>
+        <div class="header-image-container">
+            <img class="header-image" src="images/header.jpg" width="1200" height="400" alt="Dance Club">
+            <button class="button">Send a Form</button>
+        </div>
+    </div>
+    <div class="text-marquee">
+        <div class="marquee-span">
+        <p>hurry up and send the form so we can contact you, don't miss the opportunity to join   •    hurry up and send the form so we can contact you, don't miss the opportunity to join    •    hurry up and send the form so we can contact you, don't miss the opportunity to join   •    hurry up and send the form so we can contact you, don't miss the opportunity to join    •    hurry up and send the form so we can contact you, don't miss the opportunity to join    •    hurry up and send the form so we can contact you, don't miss the opportunity to join   •    hurry up and send the form so we can contact you, don't miss the opportunity to join   •    hurry up and send the form so we can contact you, don't miss the opportunity to join   •     </p>
+    </div>
+</div>
+    
+    <div class="about-us-section">
+        <h2 class="section-title">About Us</h2>
+        <div class="content">
+            <div class="section-text">
+                <p class="text-paragraph">We are a passionate team dedicated to spreading the joy of dance through professional training and unique events.</p>
+                <p class="text-paragraph">Our mission is to inspire and empower people to express themselves through movement and rhythm.</p>
+            </div>
+            <div class="about-us-box">
+                <div class="review-section">
+                    <form class="review-form">
+                        <textarea placeholder="Leave a review..."></textarea>
+                        <button type="submit">Send</button>
+                    </form>
+                    <div class="reviews-list">
+                        <p>No reviews yet.</p>
+                    </div>
+                </div>
+                <!-- Пустой прямоугольник с обводкой -->
+            </div>
+        </div>
+    </div>
+    
+    
+
+
+    <div class="dance-section">
+        <h2 class="section-title">Dance Styles</h2>
+        <div class="content">
+            <div class="section-text">
+                <p class="text-paragraph">Hip-hop is a dynamic culture.</p>
+                <p class="text-paragraph">Girly hip-hop emphasizes femininity and strength.</p>     
+                <p class="text-paragraph">Man’s hip-hop emphasizes masculinity and street aesthetics. </p>              
+                <p class="text-paragraph">Strip dance combines sexuality with grace and strength of movement.</p>
+            </div>
+            <div class="dance-styles">
+                <div class="dance-row">
+                    <div class="dance-item"><a href="hiphop.html"><img src="images/styleDance1.png" alt="Hip-Hop"></a> </div>
+                    <div class="dance-item"><a href="girl.html"><img src="images/styleDance2.png" alt="Girly Hip-Hop"></a></div>
+                </div>
+                <div class="dance-row">
+                    <div class="dance-item"><a href="stripDance.html"><img src="images/styleDance3.png" alt="Strip Dance"></a></div>
+                    <div class="dance-item"><a href="MansHip.html"><img src="images/styleDance4.png" alt="Man's Hip-Hop"></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+       
+    <div class="festivals-section">
+        <h2 class="section-title">Festivals</h2>
+        <div class="content">
+            <div class="festivals-carousel">
+                <div class="carousel-images">
+                    <img src="images/festival1.jpg" alt="Festival 1" class="carousel-image">
+                    <img src="images/festival2.jpg" alt="Festival 2" class="carousel-image">
+                    <img src="images/festival3.jpg" alt="Festival 3" class="carousel-image">
+                </div>
+                
+            </div>
+            <button class="carousel-button left-button" onclick="moveCarousel(-1)">&#10094;</button>
+                <button class="carousel-button right-button" onclick="moveCarousel(1)">&#10095;</button>
+        </div>
+    </div>
+    
+
+
+    <div class="footer">
+        <p>📍 Dance Club Address: 123 Dance Street, New York, NY</p>
+    </div>
+
+
+
+    <!-- Модальное окно -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Submit Your Application</h2>
+        <form class="application-form">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" placeholder="+7 (___) ___-__-__" required>
+            
+            <button type="submit" class="submit-btn">Send</button>
+        </form>
+    </div>
+</div>
+
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
+
